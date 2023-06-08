@@ -1,4 +1,15 @@
-# Docker based setup to run old Indexhibit sites
+# Docker based setup to run old Indexhibit (v0.70d) sites
+
+You probably ended up here because you have an old Indexhibit site (version v0.70d?) that does not work anymore. 
+
+There are some choices:
+1. Upgrade to the latest Indexhibit: https://forum.indexhibit.org/category/11/
+2. Make a static (no PHP) copy of your old site and keep it up forever
+3. Run your old site in a Docker container
+
+I recoomend 2. since static sites can literally run on anything nowadays, use very low resources and are super future proof.
+
+This project is my attempt at creating a way to easily turn your Indexhibit legacy site into static HTML / CSS / JS.
 
 ## Getting started
 
