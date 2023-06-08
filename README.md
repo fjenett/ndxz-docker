@@ -12,6 +12,12 @@
 
 You can edit the files in `html/` and reload the page in your browser.
 
+Turn PHP error reporting on. Add this to the top of the main index.php file:
+```php
+ini_set('display_errors', '0');
+error_reporting(E_ALL);
+```
+
 ## Make static site
 
 ```
