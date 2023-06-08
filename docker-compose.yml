@@ -1,0 +1,48 @@
+version: "3"
+
+services:
+
+  idxz-php:
+    # image: php:5.3-apache
+    build: .
+    restart: unless-stopped
+    environment:
+      MYSQL_HOST: idxz-mariadb:3306
+      MYSQL_USER: ndxz-user
+      MYSQL_PASSWORD: ndxz-password
+      MYSQL_DATABASE: ndxz-database
+    ports:
+      - 8989:80
+    volumes:
+      - ./html:/var/www/html
+    networks:
+      - internal
+    depends_on:
+      - idxz-mariadb
+
+  idxz-mariadb:
+    image: mariadb:10.5.8
+    environment:
+      MYSQL_USER: ndxz-user
+      MYSQL_PASSWORD: ndxz-password
+      MYSQL_ROOT_PASSWORD: as6d75as7d65a7s6d5a76s5d
+      MYSQL_DATABASE: ndxz-database
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    networks:
+      - internal
+
+  idxz-adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - internal
+
+networks:
+  internal:
+    external: false
+
+volumes:
+  mariadb_data:
