@@ -19,6 +19,10 @@ This project is my attempt at creating a way to easily turn your Indexhibit lega
 - Rename `html/ndxz-studio/config/config.docker.php` to `html/ndxz-studio/config/config.php` (replacing your own)
 - Go to http://localhost:8989 and check if everything is working OK
 
+### Cleanup
+
+- Remove all excluded files: `for f in $(git check-ignore **/*); do rm "$f"; done`
+
 ## Fixing
 
 You can edit the files in `html/` and reload the page in your browser.
