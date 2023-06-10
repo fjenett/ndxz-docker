@@ -19,7 +19,13 @@ This project is my attempt at creating a way to easily turn your Indexhibit lega
 - Rename `html/ndxz-studio/config/config.docker.php` to `html/ndxz-studio/config/config.php` (replacing your own)
 - Go to http://localhost:8989 and check if everything is working OK
 
-### Cleanup
+### Tips
+
+- If you have a custom `.htacces` file, make sure it is compatible with the changed setup
+- If you made any modifications to Indexhibit … well, check if they still work (you probably know what you are doing)
+- Check the `ndxz-studio/defaults.php` file and add more image types if you need to (upload size is 10mb)
+
+## Finishing up
 
 - Remove all excluded files: `for f in $(git check-ignore **/*); do rm "$f"; done`
 
