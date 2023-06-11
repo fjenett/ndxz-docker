@@ -1,4 +1,4 @@
 .DS_Store
 html/*
-static/*docker-compose-*.yml
+static/*
 docker-compose-*.yml
